@@ -1,18 +1,21 @@
 import React from 'react'
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 import { 
     Navbar,MainLogo,Nav_Pages,Nav_MyPage,Nav_Notifi, StoreMap, LookforFav, Nav_Notifi_Box, Nav_Notifi_Content, Nav_Notifi_Header, Nav_Notifi_memo
-    
+} from './Styled';
+import { BsBell, BsMap } from "react-icons/bs";
+import { GrAd } from "react-icons/gr";
+import { BsPerson } from "react-icons/bs";
+import { AiOutlineBell } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
- } from './Styled';
- import { BsBell, BsMap } from "react-icons/bs";
- import { GrAd } from "react-icons/gr";
- import { BsPerson } from "react-icons/bs";
- import { AiOutlineBell } from "react-icons/ai";
 export default function Nav() {
+    const navigate = useNavigate();
 
-
-
+    const goToMyPage = () => {
+        navigate("/mypage");
+    }
 
     return (
         <>
@@ -31,12 +34,9 @@ export default function Nav() {
                         취향 둘러보기
                     </LookforFav>
                 </Nav_Pages>
-                    
-                <Nav_MyPage>
-                    <BsPerson size={"30px"}/>
-                    마이페이지
+                <Nav_MyPage onClick={goToMyPage}>
+                    <BsPerson size={"30px"}/>마이페이지
                 </Nav_MyPage>
-
                 <Nav_Notifi>
                     <Nav_Notifi_Box>
                         <Nav_Notifi_Content>
