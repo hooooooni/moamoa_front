@@ -1,15 +1,25 @@
-import { Layout } from "./components/Layout/Layout"
-import { Route, Routes } from "react-router-dom"
-import MainPage from "./pages/MainPage"
-import Mypage from "./pages/Mypage"
+
+import { Outlet, Route, Routes, useNavigate } from "react-router-dom"
+import  { Container } from "./pages/MainPage"
+import styled from 'styled-components';
+import Nav from "./components/Nav";
+
 
 function App() {
+
+  const navigate = useNavigate();
+
+  const Gotosignup = () => {
+    navigate("/")
+  }
+
   return (
     <>
-      <Routes>
-        <Route path="/" element={<MainPage />}v/>
-        <Route path="/mypage" element={<Mypage />} />         
-      </Routes>
+      <Container>
+        <Nav/>
+        <Outlet/>
+      </Container>
+
     </>
   )
 }
