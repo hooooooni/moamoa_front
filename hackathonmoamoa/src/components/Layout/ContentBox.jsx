@@ -13,7 +13,9 @@ export default function ContentBox() {
             <ContentOuter>
                 <Content>
                     <Content_Top>
-                        <Content_Top_Map>Map</Content_Top_Map>
+                        <Content_Top_Map>Map
+                            <Location></Location>
+                        </Content_Top_Map>
                         <Content_Top_Scrap>
                             <Content_Top_Scrap_Header>
                                 스크랩
