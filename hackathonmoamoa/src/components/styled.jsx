@@ -5,7 +5,7 @@ export const Navbar = styled.div`
     display:flex;
     flex-direction: column;
     align-items: center;
-    width:15vw;
+    width:15%;
     background-Color: #F3F7FC;
     
 `
@@ -44,7 +44,7 @@ export const StoreMap = styled.div`
     align-items: center;
     font-weight: 600;
     height: 60px;
-    width:200px;
+    width:100%;
     border-radius: 8px;
     gap:45px;
     font-size: 20px;
@@ -57,7 +57,7 @@ export const LookforFav = styled.div`
     font-size: 20px;
     font-weight: 600;
     height: 60px;
-    width:200px;
+    width:100%;
     border-radius: 8px;
     gap:15px;
     
@@ -70,7 +70,7 @@ export const MyreviewBox = styled.div`
     font-size: 20px;
     font-weight: 600;
     height: 60px;
-    width:200px;
+    width:100%;
     border-radius: 8px;
     gap:45px;
     
@@ -144,7 +144,7 @@ export const Nav_Logout_Box = styled.button`
 // ContentBox
 
 export const ContentOuter = styled.div`
-    width:85vw;
+    width:85%;
     display:flex;
     justify-content: center;
     align-items: center;

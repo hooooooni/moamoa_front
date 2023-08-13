@@ -25,7 +25,8 @@ export default function Nav() {
         backgroundColor:'#60A1FF',
         color:'#ffffff ',
         textDecoration: "none",
-        width:"200px"
+        width:"100%",
+        height:"100%",
     
 
         
@@ -34,7 +35,8 @@ export default function Nav() {
         backgroundColor: '#F3F7FC',
         color: '#000000',
         textDecoration: "none",
-        width:"200px"
+        width:"100%",
+        height:"100%",
         
         
     }
