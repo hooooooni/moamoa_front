@@ -164,7 +164,6 @@ export const Content = styled.div`
 
 `
 export const Content_Top = styled.div`
-
     width:93%;
     border:1px solid black;
     height:60%;
@@ -175,7 +174,6 @@ export const Content_Top = styled.div`
 
 `
 export const Content_Top_Map = styled.div`
-
     width:60%;
     border:1px solid black;
     height:100%;
@@ -187,7 +185,7 @@ export const Content_Top_Scrap = styled.div`
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width:30%;
+    width:40%;
     height:100%;
     background-color: white;
     border-radius: 8px;
@@ -216,7 +214,7 @@ export const Content_Bottom = styled.div`
 
     width:93%;
     border:1px solid black;
-    height: 30%;
+    height: 40%;
 
 `
 
@@ -225,7 +223,7 @@ export const Content_Bottom_Header = styled.div`
     justify-content: center;
     width:20%;
     border:1px solid black;
-    height:30px;
+    height:12%;
     font-size: 20px;
     gap:10px;
     font-weight: 600;
@@ -235,7 +233,7 @@ export const Content_Slider = styled.div`
 
     width:100%;
     border:1px solid black;
-    height:160px;
+    height:88%;
     font-size: 20px;
 
 `
