@@ -36,7 +36,7 @@ const Location = () => {
 
         if (window.kakao && window.kakao.maps) {
           const container = document.getElementById('map');
-          console.log('VITE_APP_KAKAO_MAP:', import.meta.env.VITE_APP_KAKAO_MAP);
+
           const options = {
             center: new window.kakao.maps.LatLng(37.365264512305174, 127.10676860117488),
             level: 3

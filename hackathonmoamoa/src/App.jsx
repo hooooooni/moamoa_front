@@ -1,3 +1,4 @@
+
 import { Outlet, Route, Routes, useNavigate } from "react-router-dom"
 import  { Container } from "./pages/MainPage"
 import styled from 'styled-components';
