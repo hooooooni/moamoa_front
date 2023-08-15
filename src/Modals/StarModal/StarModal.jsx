@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import * as S from "./styled"
 import { AiOutlineClose } from "react-icons/ai";
-import StarRating from "../components/StarRating/StarRating";
+import StarRating from "../../components/StarRating/StarRating";
 
 
 
