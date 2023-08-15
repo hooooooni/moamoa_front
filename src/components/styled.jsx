@@ -165,7 +165,7 @@ export const Content = styled.div`
 `
 export const Content_Top = styled.div`
     width:93%;
-    border:1px solid black;
+    /* border:1px solid black; */
     height:60%;
     display: flex;
     flex-direction: row;
