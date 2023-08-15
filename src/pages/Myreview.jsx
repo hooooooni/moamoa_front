@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Content, ContentOuter } from '../components/Styled';
 import NotifiModal from '../Modals/NotifiModal';
 import styled from 'styled-components';
-import StarModal from '../Modals/StarModal';
+import StarModal from '../Modals/StarModal/StarModal'
 
 function Myreview() {
     const [notifimodalOpen, setNotifimodalOpen] = useState(false);
