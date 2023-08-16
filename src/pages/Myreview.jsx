@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Content, ContentOuter } from "../components/Styled"
-import NotifiModal from "../Modals/NotifiModal";
 import styled from "styled-components";
 import StarModal from "../Modals/StarModal/StarModal";
+import ReviewBox from "../components/Myreview/ReviewBox";
 
 function Myreview() {
-    const [notifimodalOpen, setNotifimodalOpen] = useState(false);
+    // const [notifimodalOpen, setNotifimodalOpen] = useState(false);
     const [starmodalOpen, setStarmodalOpen] = useState(false);
 
     const handleClick = () => {
@@ -30,10 +30,11 @@ function Myreview() {
         <>
             <ContentOuter>
                 <Content>
-                    <Btn onClick={handleClick}>공지사항</Btn>
+                    {/* <Btn onClick={handleClick}>공지사항</Btn>
                     {notifimodalOpen && (
                         <NotifiModal setNotifimodalOpen={setNotifimodalOpen} />
-                    )}
+                    )} */}
+                    <ReviewBox />
                     <Btn onClick={handleStarClick}>수정</Btn>
                     {starmodalOpen && (
                         <StarModal setStarmodalOpen={setStarmodalOpen} /> // 수정: setStarmodalOpen으로 변경
