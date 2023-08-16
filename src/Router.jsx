@@ -3,7 +3,7 @@ import App from "./App";
 import MainPage from "./pages/MainPage";
 import Signup from "./Signup";
 import LookforPage from "./pages/LookforPage";
-import Myreview from "./pages/Myreview";
+import MyReview from "./pages/Myreview";
 import StorePage from "./pages/StorePage";
 
 
