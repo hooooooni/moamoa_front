@@ -8,12 +8,16 @@ export default function ReviewBox() {
 
     const fetchReviews = async () => {
         try {
-            const response = await axios.get("http://127.0.0.1:8000/api/review");
+            const response = await axios.get("http://127.0.0.1:8000/api/user/my_reviews", // 요청 URL 변경
+                {
+                    withCredentials: true, // withCredentials 옵션 설정
+                }
+            );
             setReviews(response.data);
         } catch (error) {
             console.log("Error fetching reviews:", error);
         }
-    };
+    }
 
     useEffect(() => {
         fetchReviews();
@@ -25,10 +29,22 @@ export default function ReviewBox() {
                 {reviews.map((review, index) => (
                     <S.Review_Item key={index}>
                         <S.Review>
-                            <S.ReviewStoreName>{review.store}</S.ReviewStoreName>
+                            <S.ReviewStoreName>{review.storename}</S.ReviewStoreName>
                             <S.ReviewRating>
                                 평점 {review.rating}
                             </S.ReviewRating>
+                            {review.images.length > 0 ? (
+                                <img
+                                    src={`http://127.0.0.1:8000${review.images[0].image}`}
+                                    width={"100px"}
+                                    height={"100px"}
+                                    alt={`Review Image`}
+                                />
+                            ) : (
+                                <p>No image available</p>
+                            )}
+
+
                             <S.ReviewTitle>
                                 <b>제목</b> {review.title}
                             </S.ReviewTitle>

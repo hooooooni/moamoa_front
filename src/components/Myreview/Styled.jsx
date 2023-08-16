@@ -42,6 +42,7 @@ export const Review = styled.div`
 export const ReviewStoreName = styled.div`
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
 `;
 
 export const ReviewRating = styled.div`

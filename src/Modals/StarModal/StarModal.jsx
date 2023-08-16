@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import * as S from "./styled";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaPlus } from "react-icons/fa";
-import StarRating from "../../components/StarRating/StarRating";
+import StarRating from "../../components/starRating/StarRating";
 
 export default function StarModal({ setStarmodalOpen }) {
     const modalRef = useRef();
