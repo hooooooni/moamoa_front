@@ -14,14 +14,17 @@ export const Overlay = styled.div`
 
 export const StarContainer = styled.div`
     position: fixed;
-    width: 60%;
-    height: 60%;
+    width: 50%;
+    height: 50%;
     background-color: transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     background-color: #273345;
     overflow: hidden;
+    border-radius: 8px;
+    
 `;
 
 export const StarModalCloseBtn = styled.button`
@@ -40,9 +43,8 @@ export const Star = styled.div`
     flex-direction: row;
     position: absolute;
     justify-content: center;
-    /* z-index: 1100; */
+
     align-items: center;
-    margin: 50px 0px 0px 0px;
 `;
 
 export const Star_Left = styled.div`
@@ -62,7 +64,7 @@ export const Star_Title = styled.div`
     border-radius: 15px;
     text-align: center;
     height: 100%;
-    padding: 5px 0px 5px 0px;
+    padding: 15px 0px 15px 0px;
     margin-bottom: 10px;
 `;
 
@@ -87,9 +89,9 @@ export const Star_Left_Image_Title = styled.div`
 
 export const Star_Left_Image_1 = styled.img`
     color: white;
-    width: 50px;
-    height: 50px;
-    padding: 40px 0px 10px 0px;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
 `;
 
 export const Star_Left_Image_Container = styled.div`
@@ -151,4 +153,16 @@ export const Star_Right_Content_Input = styled.input`
     border-style: none;
     font-family: 'Noto Sans KR';
     font-weight: Regular;
+`;
+
+export const Submit_Button = styled.button`
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    background-color: #60a1ff;
+    border: 1px solid transparent;
+    margin-top: 20px;
 `;
