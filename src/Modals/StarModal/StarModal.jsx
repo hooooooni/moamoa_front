@@ -107,6 +107,7 @@ export default function StarModal({ setStarmodalOpen }) {
                         <S.Star_Right_Title_Input></S.Star_Right_Title_Input>
                         <S.Star_Right_Content>평가 내용</S.Star_Right_Content>
                         <S.Star_Right_Content_Input></S.Star_Right_Content_Input>
+                        <S.Submit_Button>제출하기</S.Submit_Button>
                     </S.Star_Right>
                 </S.Star>
             </S.StarContainer>
