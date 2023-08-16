@@ -12,36 +12,36 @@ import StorePage from "./pages/StorePage";
 const router = createBrowserRouter([
 
     {
-    path:"App",
-    element: <App/>,
-    children : [
-        {
-            path:"MainPage",
-            element: <MainPage/>
-        },
+        path: "App",
+        element: <App />,
+        children: [
+            {
+                path: "MainPage",
+                element: <MainPage />
+            },
 
-        {
-            path:"LookforPage",
-            element: <LookforPage/>
-        },
+            {
+                path: "LookforPage",
+                element: <LookforPage />
+            },
 
-        {
-            path:"Myreview",
-            element: <Myreview/>
-        },
-        {
-            path:":Storepage",
-            element: <StorePage/>
-        },
+            {
+                path: "MyReview",
+                element: <MyReview />
+            },
+            {
+                path: ":Storepage",
+                element: <StorePage />
+            },
 
-    ],
-    
+        ],
+
     },
     {
-        path:"/",
-        element: <Signup/>
+        path: "/",
+        element: <Signup />
 
-        },
+    },
 ]);
 
 export default router;

@@ -25,6 +25,41 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { useNavigate } from "react-router-dom";
+function MyComponent() {
+    const [data, setData] = useState({});
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        // API 요청
+        axios.get('http://127.0.0.1:8000/api/kakao_callback')
+            .then(response => {
+                setData(response.data);
+                setLoading(false);
+            })
+            .catch(error => {
+                setError(error);
+                setLoading(false);
+            });
+    }, []);
+
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+
+    if (error) {
+        return <p>Error: {error.message}</p>;
+    }
+
+    return (
+        <div>
+            <p>Access Token: {data.access_token}</p>
+            <p>Nickname: {data.nickname}</p>
+            <p>Image URL: {data.image_url}</p>
+        </div>
+    );
+}
+
 
 export default function ContentBox() {
     const [text, setText] = useState([]);
@@ -67,7 +102,10 @@ export default function ContentBox() {
             <ContentOuter>
                 <Content>
                     <Content_Top>
-                        <Content_Top_Map>{/* <Location></Location> */}</Content_Top_Map>
+                        <Content_Top_Map>
+                            {/* <Location></Location> */}
+
+                        </Content_Top_Map>
                         <Content_Top_Scrap>
                             <Content_Top_Scrap_Header>스크랩</Content_Top_Scrap_Header>
                             <Content_Top_Scrap_Body></Content_Top_Scrap_Body>
