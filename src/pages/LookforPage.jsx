@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Content, ContentOuter } from "../components/Styled";
 import NotifiModal from "../Modals/NotifiModal";
 import styled from "styled-components";
+import Scrap from "../components/scrap/Scrap"
 function LookforPage() {
   const [notifimodalOpen, setNotifimodalOpen] = useState(false);
 
@@ -42,10 +43,11 @@ function LookforPage() {
     <>
       <ContentOuter>
         <Content>
-          <Btn onClick={handleClick}>둘러보기</Btn>
+          <Scrap />
+          {/* <Btn onClick={handleClick}>둘러보기</Btn>
           {notifimodalOpen && (
             <NotifiModal setNotifimodalOpen={setNotifimodalOpen} />
-          )}
+          )} */}
         </Content>
       </ContentOuter>
     </>
