@@ -36,7 +36,7 @@ export const Scrap = styled.div`
 export const Scrap_Title = styled.div`
     font-size: 20px;
     font-weight: bold;
-    padding: 40px 0px 5px 0px;
+    padding: 10px 0px 5px 0px;
     text-align: center;
 `;
 
