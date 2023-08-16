@@ -69,3 +69,14 @@ export const ReviewImg = styled.img`
     width: 180px;
     height: 150px;
 `;
+
+export const Review_Delete_Button = styled.button`
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: white;
+    background-color: #60a1ff;
+    border: 1px solid transparent;
+    margin-top: 10px;
+`;

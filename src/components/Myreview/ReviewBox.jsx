@@ -19,6 +19,20 @@ export default function ReviewBox() {
         }
     }
 
+    const handleDeleteReview = async (reviewId) => {
+        try {
+            await axios.delete(`http://127.0.0.1:8000/api/review/${reviewId}`, {
+                withCredentials: true,
+            });
+
+            // 삭제 후, 리뷰 목록을 업데이트하여 삭제된 리뷰를 제거합니다.
+            setReviews(reviews.filter(review => review.review_id !== reviewId));
+        } catch (error) {
+            console.log("Error deleting review:", error);
+        }
+    }
+
+
     useEffect(() => {
         fetchReviews();
     }, []);
@@ -51,6 +65,9 @@ export default function ReviewBox() {
                             <S.ReviewContent>
                                 {review.content}
                             </S.ReviewContent>
+                            <S.Review_Delete_Button onClick={() => handleDeleteReview(review.review_id)}>
+                                삭제하기
+                            </S.Review_Delete_Button>
                         </S.Review>
                     </S.Review_Item>
                 ))}
