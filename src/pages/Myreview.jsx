@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Content, ContentOuter } from "../components/Styled";
+import { Content, ContentOuter } from "../components/styled";
 import styled from "styled-components";
 import StarModal from "../Modals/StarModal/StarModal";
 import ReviewBox from "../components/Myreview/ReviewBox";

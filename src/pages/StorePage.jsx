@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import StarModal from "../Modals/StarModal/StarModal";
-import { Content, ContentOuter } from "../components/Styled";
+import { Content, ContentOuter } from "../components/styled";
 import {
   StorePageBox,
   Storeinfo,
@@ -124,14 +124,13 @@ function StorePage() {
   `;
 
   const Div1 = styled.div`
-  display: flex;
-  flex-direction: row;
-  /* justify-content: space-around; */
-  align-items: center;
-  gap: 40px;
-  text-align: right;
-`;
-
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    align-items: center;
+    gap: 40px;
+    text-align: right;
+  `;
 
   const SmallSliderview = styled.button`
     width: 90%;
@@ -143,7 +142,7 @@ function StorePage() {
     justify-content: center;
     background-color: #fcfaf7;
     border: 1px solid transparent;
-    box-shadow: 4px 4px rgba(0,0,0,0.1);
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.1);
   `;
   const SmallSliderviewheader = styled.button`
     width: 100%;
@@ -269,7 +268,9 @@ function StorePage() {
                   <Storeinfo3rightcontent>
                     {lionData.menus.map((menu, index) => (
                       <Div1 key={index}>
-                        <div><b>{menu.name}</b></div>
+                        <div>
+                          <b>{menu.name}</b>
+                        </div>
                         <div>{menu.price}</div>
                       </Div1>
                     ))}

@@ -1,17 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import {
-  Content,
-  ContentOuter,
-  Content_Bottom,
-  Content_Bottom_Header,
-  Content_Slider,
-  Content_Top,
-  Content_Top_Map,
-  Content_Top_Scrap,
-  Content_Top_Scrap_Body,
-  Content_Top_Scrap_Header,
-} from "./Styled";
+import * as S from "./styled";
 import { PiForkKnife } from "react-icons/pi";
 import axios from "axios";
 // import Location from './Layout/Location';
@@ -68,99 +57,25 @@ export default function ContentBox() {
       [store_id]: !prevState[store_id],
     }));
   };
-  const Box = styled.div`
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-  `;
-  const Slide = styled.div`
-    width: 100%;
-    height: 200px;
-    display: flex;
-    box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    background-color: whitesmoke;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
 
-    &:hover {
-      transform: scale(1.05);
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    }
-  `;
-  const Slideimage = styled.div`
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    img {
-      width: 70%;
-      height: 70%;
-      border-radius: 8px; /* Add this line to apply rounded corners */
-    }
-  `;
-  const Slideinfo = styled.div`
-    width: 50%;
-    height: 100%;
-  `;
-  const Sliderow = styled.div`
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    height: 80%;
-  `;
-  const Slidewrapper = styled.div`
-    width: 80%;
-    height: 80%;
-    display: flex;
-    flex-direction: row;
-  `;
-  const Sliderinfoheader = styled.div`
-    width: 100%;
-    height: 50%;
-    font-weight: 600;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  `;
-
-  const Sliderinfocontent = styled.div`
-    width: 100%;
-    height: 50%;
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    color: #5b5f66;
-    font-size: 13px;
-  `;
   const handleSlideClick = (lion) => {
     navigate(`/App/${lion.name}`, { state: lion }); // Pass the lion data as state
   };
   return (
     <>
-      <ContentOuter>
-        <Content>
-          <Content_Top>
-            <Content_Top_Map>
+      <S.ContentOuter>
+        <S.Content>
+          <S.Content_Top>
+            <S.Content_Top_Map>
               <Location></Location>
-            </Content_Top_Map>
-          </Content_Top>
-          <Content_Bottom>
-            <Content_Bottom_Header>
+            </S.Content_Top_Map>
+          </S.Content_Top>
+          <S.Content_Bottom>
+            <S.Content_Bottom_Header>
               <PiForkKnife size={"30px"} />내 주변 맛집
-            </Content_Bottom_Header>
-            <Content_Slider>
-              <Box>
+            </S.Content_Bottom_Header>
+            <S.Content_Slider>
+              <S.Box>
                 <Swiper
                   // install Swiper modules
                   modules={[Navigation, Pagination]}
@@ -174,29 +89,29 @@ export default function ContentBox() {
                 >
                   {text.map((lion, idx) => (
                     <SwiperSlide key={idx}>
-                      <Slide>
-                        <Slidewrapper
+                      <S.Slide>
+                        <S.Slidewrapper
                           key={idx}
                           onClick={() => handleSlideClick(lion)}
                         >
-                          <Slideimage>
+                          <S.Slideimage>
                             <img
                               src={`${lion.images[0].image}`}
                               alt={lion.name} // Don't forget to add alt attribute for accessibility
                             />
-                          </Slideimage>
-                          <Slideinfo>
-                            <Sliderinfoheader>{lion.name}</Sliderinfoheader>
-                            <Sliderinfocontent>
+                          </S.Slideimage>
+                          <S.Slideinfo>
+                            <S.Sliderinfoheader>{lion.name}</S.Sliderinfoheader>
+                            <S.Sliderinfocontent>
                               {lion.road_address}
                               <br />
                               {lion.operation_time}
                               <br />
                               평점: {lion.ratings}/5
-                            </Sliderinfocontent>
-                          </Slideinfo>
-                        </Slidewrapper>
-                        <Sliderow>
+                            </S.Sliderinfocontent>
+                          </S.Slideinfo>
+                        </S.Slidewrapper>
+                        <S.Sliderow>
                           <img
                             className="scrap-black-image"
                             src={
@@ -209,16 +124,16 @@ export default function ContentBox() {
                               toggleScrap(lion.store_id);
                             }}
                           />
-                        </Sliderow>
-                      </Slide>
+                        </S.Sliderow>
+                      </S.Slide>
                     </SwiperSlide>
                   ))}
                 </Swiper>
-              </Box>
-            </Content_Slider>
-          </Content_Bottom>
-        </Content>
-      </ContentOuter>
+              </S.Box>
+            </S.Content_Slider>
+          </S.Content_Bottom>
+        </S.Content>
+      </S.ContentOuter>
     </>
   );
 }

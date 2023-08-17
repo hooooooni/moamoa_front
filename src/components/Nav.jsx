@@ -11,7 +11,7 @@ import {
   Navbar_Logout,
   Nav_Logout_Box,
   MyreviewBox,
-} from "./Styled";
+} from "./styled";
 
 import { BsPerson, BsMap, BsBullseye } from "react-icons/bs";
 import { GrAd } from "react-icons/gr";

@@ -1,6 +1,6 @@
 // ReviewBox.js (또는 해당 파일 이름)
 import React, { useState, useEffect } from "react";
-import * as S from "./styled";
+import * as S from "./Styled";
 import axios from "axios";
 
 export default function ReviewBox() {
