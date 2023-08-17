@@ -180,7 +180,7 @@ export default function ContentBox() {
                         >
                           <Slideimage>
                             <img
-                              src={`http://127.0.0.1:8000${lion.images[0].image}`}
+                              src={`${lion.images[0].image}`}
                               alt={lion.name} // Don't forget to add alt attribute for accessibility
                             />
                           </Slideimage>

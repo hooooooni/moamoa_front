@@ -175,17 +175,17 @@ function StorePage() {
                   </StoreBmakrwrapper> */}
                   <Storeinfo1wrapper>
                     <HoverableImage
-                      src={`http://127.0.0.1:8000${lionData.images[0].image}`}
+                      src={`${lionData.images[0].image}`}
                       width="34%"
                       height="100%"
                     />
                     <HoverableImage
-                      src={`http://127.0.0.1:8000${lionData.images[1].image}`}
+                      src={`${lionData.images[1].image}`}
                       width="33%"
                       height="100%"
                     />
                     <HoverableImage
-                      src={`http://127.0.0.1:8000${lionData.images[2].image}`}
+                      src={`${lionData.images[2].image}`}
                       width="33%"
                       height="100%"
                     />
@@ -289,7 +289,7 @@ function StorePage() {
                           <SmallSliderviewcontent>
                             {lionData.reviews[0].images[0]?.image ? (
                               <img
-                                src={`http://127.0.0.1:8000${lionData.reviews[0].images[0].image}`}
+                                src={`${lionData.reviews[0].images[0].image}`}
                                 width={"100px"}
                                 height={"80px"}
                                 style={{ borderRadius: "8px" }}
@@ -335,7 +335,7 @@ function StorePage() {
                               <Storeinfobox5picleft>
                                 {lionData.reviews[0].images[0]?.image ? (
                                   <img
-                                    src={`http://127.0.0.1:8000${lionData.reviews[0].images[0].image}`}
+                                    src={`${lionData.reviews[0].images[0].image}`}
                                     width={"120px"}
                                     height={"90px"}
                                     style={{ borderRadius: "8px" }}
