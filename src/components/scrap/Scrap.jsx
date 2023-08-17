@@ -15,7 +15,7 @@ export default function Scrap() {
   const fetchScrap = async () => {
     try {
       const response = await axios.get(
-        "http://127.0.0.1:8000/api/user/scraps",
+        "http://13.209.111.199/api/user/scraps",
         {
           withCredentials: true,
         }
@@ -38,7 +38,7 @@ export default function Scrap() {
   const unscrap = async (store_id) => {
     try {
       await axios.post(
-        `http://127.0.0.1:8000/api/store/${store_id}/unscrap`,
+        `http://13.209.111.199/api/store/${store_id}/unscrap`,
         store_id,
         {
           withCredentials: true,
@@ -71,7 +71,7 @@ export default function Scrap() {
                 <S.Scrap>
                   <div className="scrap-item-container">
                     <img
-                      src={`http://127.0.0.1:8000${scrapItem.images.image}`}
+                      src={`http://13.209.111.199${scrapItem.images.image}`}
                       width={"200px"}
                       height={"200px"}
                       alt={`Scrap Image`}

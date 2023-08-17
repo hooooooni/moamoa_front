@@ -9,7 +9,7 @@ export default function ReviewBox() {
   const fetchReviews = async () => {
     try {
       const response = await axios.get(
-        "http://127.0.0.1:8000/api/user/my_reviews", // 요청 URL 변경
+        "http://13.209.111.199/api/user/my_reviews", // 요청 URL 변경
         {
           withCredentials: true, // withCredentials 옵션 설정
         }
@@ -22,7 +22,7 @@ export default function ReviewBox() {
 
   const handleDeleteReview = async (reviewId) => {
     try {
-      await axios.delete(`http://127.0.0.1:8000/api/review/${reviewId}`, {
+      await axios.delete(`http://13.209.111.199/api/review/${reviewId}`, {
         withCredentials: true,
       });
 

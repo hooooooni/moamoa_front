@@ -35,7 +35,7 @@ export default function StarModal({ setStarmodalOpen, onClose, storeId }) {
 
     try {
       const response = await axios.post(
-        `http://127.0.0.1:8000/api/store/${storeId}/review`,
+        `http://13.209.111.199/api/store/${storeId}/review`,
         reviewData,
         {
           withCredentials: true,

@@ -27,7 +27,7 @@ export default function Nav() {
   const handleLogout = async () => {
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/kakao/logout",
+        "http://13.209.111.199/api/kakao/logout",
         {},
         {
           withCredentials: true, // 쿠키 포함 설정
