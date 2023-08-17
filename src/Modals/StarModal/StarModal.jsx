@@ -152,7 +152,13 @@ export default function StarModal({ setStarmodalOpen, onClose, storeId }) {
               value={reviewContent}
               onChange={(e) => setReviewContent(e.target.value)}
             />
-            <S.Submit_Button onClick={handleSubmit} disabled={submitting}>
+            <S.Submit_Button
+              onClick={() => {
+                handleSubmit();
+                onClose();
+              }}
+              disabled={submitting}
+            >
               {submitting ? "제출 중..." : "제출하기"}
             </S.Submit_Button>
           </S.Star_Right>

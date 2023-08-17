@@ -35,10 +35,6 @@ function Myreview() {
                         <NotifiModal setNotifimodalOpen={setNotifimodalOpen} />
                     )} */}
           <ReviewBox />
-          <Btn onClick={handleStarClick}>수정</Btn>
-          {starmodalOpen && (
-            <StarModal setStarmodalOpen={setStarmodalOpen} /> // 수정: setStarmodalOpen으로 변경
-          )}
         </Content>
       </ContentOuter>
     </>
