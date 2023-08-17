@@ -17,10 +17,14 @@ export default function Scrap() {
             const response = await axios.get("http://127.0.0.1:8000/api/user/scraps", {
                 withCredentials: true,
             });
-            setScrap(response.data);
-            initializeScrapStates(response.data);
+            console.log("Review submitted successfully:", response.data);
+
+            setSubmitting(false); // 제출 완료 후 상태 업데이트
+            setStarmodalOpen(false); // 모달 창 닫기
+            onClose();
         } catch (error) {
-            console.log("Error fetching scrap:", error);
+            console.error("Error submitting review:", error);
+            setSubmitting(false); // 에러 발생 시 상태 업데이트
         }
     }
 
