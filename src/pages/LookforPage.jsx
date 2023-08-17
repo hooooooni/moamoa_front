@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Content, ContentOuter } from "../components/Styled";
-import NotifiModal from "../Modals/NotifiModal";
+import { Content, ContentOuter } from "../components/styled";
 import styled from "styled-components";
 import Scrap from "../components/scrap/Scrap";
 function LookforPage() {

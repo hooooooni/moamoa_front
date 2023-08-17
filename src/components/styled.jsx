@@ -215,3 +215,80 @@ export const NoScrapMessage = styled.div`
   font-size: 12px;
   text-align: center;
 `;
+
+//새로 추가된거
+export const Box = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+`;
+export const Slide = styled.div`
+  width: 100%;
+  height: 200px;
+  display: flex;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+`;
+export const Slideimage = styled.div`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  img {
+    width: 70%;
+    height: 70%;
+    border-radius: 8px; /* Add this line to apply rounded corners */
+  }
+`;
+export const Slideinfo = styled.div`
+  width: 50%;
+  height: 100%;
+`;
+export const Sliderow = styled.div`
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 80%;
+`;
+export const Slidewrapper = styled.div`
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+`;
+export const Sliderinfoheader = styled.div`
+  width: 100%;
+  height: 50%;
+  font-weight: 600;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Sliderinfocontent = styled.div`
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  color: #5b5f66;
+  font-size: 13px;
+`;
