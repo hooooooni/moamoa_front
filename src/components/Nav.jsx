@@ -92,7 +92,7 @@ export default function Nav() {
             </NavLink>
 
             <NavLink
-              to={"/App/LookforPage"}
+              to={"/App/LookForPage"}
               style={({ isActive }) =>
                 isActive ? activeStyle : nonactiveStyle
               }
@@ -104,7 +104,7 @@ export default function Nav() {
             </NavLink>
 
             <NavLink
-              to={"/App/Myreview"}
+              to={"/App/MyReview"}
               style={({ isActive }) =>
                 isActive ? activeStyle : nonactiveStyle
               }
