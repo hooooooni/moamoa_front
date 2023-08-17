@@ -48,7 +48,7 @@ export default function ReviewBox() {
               <S.ReviewRating>평점 {review.rating}</S.ReviewRating>
               {review.images.length > 0 ? (
                 <img
-                  src={`http://127.0.0.1:8000${review.images[0].image}`}
+                  src={`${review.images[0].image}`}
                   width={"100px"}
                   height={"100px"}
                   alt={`Review Image`}
