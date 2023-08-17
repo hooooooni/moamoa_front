@@ -6,7 +6,7 @@ import "./Signup.css";
 // const REST_API_KEY = process.env.REACT_APP_REST_API_KEY;
 // const REDIRECT_URI = 'http://localhost:3000/oauth';
 
-function Signup() {
+function SignUp() {
   const navigate = useNavigate();
   const url = "http://127.0.0.1:8000/api/kakao/login";
 
@@ -71,4 +71,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default SignUp;
