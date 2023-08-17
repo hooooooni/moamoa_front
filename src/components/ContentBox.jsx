@@ -27,7 +27,7 @@ export default function ContentBox() {
 
   const mainpagescrap = async (store_id) => {
     const rsp = await axios.post(
-      `http://127.0.0.1:8000/api/store/${store_id}/scrap`,
+      `http://13.209.111.199/api/store/${store_id}/scrap`,
       {},
       { withCredentials: true }
     );
@@ -38,7 +38,7 @@ export default function ContentBox() {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "http://127.0.0.1:8000/api/store/get_near_store",
+        "http://13.209.111.199/api/store/get_near_store",
         {
           withCredentials: true,
         }

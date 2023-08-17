@@ -42,7 +42,7 @@ const StarInput = ({ onClickRating, value, isHalf }) => {
 
     // 평가 값을 백엔드로 전송 (추가)
     axios
-      .post("http://127.0.0.1:8000/api/rate", { rating: value })
+      .post("http://13.209.111.199/api/rate", { rating: value })
       .then((response) => {
         console.log("Rating submitted successfully:", response.data);
       })

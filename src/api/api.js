@@ -1,9 +1,7 @@
 import axios from "axios";
 
-// const { VITE_APP_SERVER_PORT } = "http://127.0.0.1:8000";
-
 const instance = axios.create({
-  baseURL: "http://127.0.0.1:8000/api/",
+  baseURL: "http://13.209.111.199/api/",
   withCredentials: true,
 
   headers: {
