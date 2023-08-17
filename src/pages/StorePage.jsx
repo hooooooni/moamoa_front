@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import StarModal from "../Modals/StarModal/StarModal";
+import StarModal from "../components/StarModal/StarModal";
 import { Content, ContentOuter } from "../components/styled";
 import {
   StorePageBox,
