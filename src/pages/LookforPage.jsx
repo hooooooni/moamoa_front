@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as S from "../components/styled";
 import Scrap from "../components/scrap/Scrap";
-function LookforPage() {
+function LookForPage() {
   const [notifimodalOpen, setNotifimodalOpen] = useState(false);
 
   const handleClick = () => {
@@ -39,4 +39,4 @@ function LookforPage() {
   );
 }
 
-export default LookforPage;
+export default LookForPage;
