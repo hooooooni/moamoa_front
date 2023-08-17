@@ -326,7 +326,7 @@ function StorePage() {
                 </Box>
               </Storeinfobox5>
             </Storeinfo>
-            <Storefunc>
+            {/* <Storefunc>
               <StoreChat>
                 <StoreChattop>
                   <StoreChattoplive>
@@ -350,7 +350,7 @@ function StorePage() {
                 <StoreKeyWordmoamoa>모아모아</StoreKeyWordmoamoa>
                 <StoreKeyWordcontent></StoreKeyWordcontent>
               </StoreKeyWord>
-            </Storefunc>
+            </Storefunc> */}
           </StorePageBox>
         </Content>
       </ContentOuter>
