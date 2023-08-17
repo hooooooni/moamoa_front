@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import * as S from "./styled";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaPlus } from "react-icons/fa";
-import StarRating from "../starRating/StarRating"
+import StarRating from "../StarRatings/StarRating";
 import axios from "axios";
 
 export default function StarModal({ setStarmodalOpen, onClose, storeId }) {
