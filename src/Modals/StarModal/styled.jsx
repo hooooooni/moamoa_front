@@ -30,6 +30,7 @@ export const StarContainer = styled.div`
 export const StarModalCloseBtn = styled.button`
     color: white;
     position: absolute;
+    z-index: 1200;
     top: 10px;
     right: 10px;
     font-size: 20px;
