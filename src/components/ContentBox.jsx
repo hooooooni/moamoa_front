@@ -5,6 +5,7 @@ import { PiForkKnife } from "react-icons/pi";
 import axios from "axios";
 // import Location from './Layout/Location';
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+
 import Scrap_black from "../../src/components/image/scrap_black.svg";
 import Scrap_white from "../../src/components/image/scrap_white.svg";
 

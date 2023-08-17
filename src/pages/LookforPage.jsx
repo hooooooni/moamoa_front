@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import * as S from "../components/styled";
+
 import Scrap from "../components/scrap/Scrap";
 function LookForPage() {
   const [notifimodalOpen, setNotifimodalOpen] = useState(false);
