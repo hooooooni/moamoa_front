@@ -9,4 +9,9 @@ export default defineConfig({
       process.env.VITE_APP_KAKAO_MAP
     ),
   },
+  build: {
+    rollupOptions: {
+      external: ["@emotion/react"],
+    },
+  },
 });
