@@ -70,7 +70,12 @@ export default function Nav() {
       <Navbar>
         <Navbar_Menu>
           <MainLogo>
-            <img src={`/img/Moamoalogo.png`} width="100%" height="48%" />
+            <img
+              src={`/img/Moamoalogo.png`}
+              width="100%"
+              height="48%"
+              onClick={() => navigate("/App/MainPage")}
+            />
           </MainLogo>
 
           <Nav_Pages>
