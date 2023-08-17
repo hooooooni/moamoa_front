@@ -12,7 +12,7 @@ export const StorePageBox = styled.div`
   border-radius: 8px;
 `;
 export const Storeinfo = styled.div`
-  width: 75%;
+  width: 100%;
   height: 100%;
   background-color: white;
   border-radius: 8px;

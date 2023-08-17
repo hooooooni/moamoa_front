@@ -18,13 +18,13 @@ import axios from "axios";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { useNavigate } from "react-router-dom";
+import { BsBookmark } from "react-icons/bs";
 
 export default function ContentBox() {
   const [text, setText] = useState([]);
@@ -50,18 +50,20 @@ export default function ContentBox() {
   const Box = styled.div`
     width: 100%;
     height: 100%;
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 8px;
   `;
   const Slide = styled.div`
     width: 100%;
     height: 200px;
     display: flex;
     justify-content: center;
+    flex-direction: row;
     align-items: center;
     background-color: whitesmoke;
+    border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
 
@@ -69,6 +71,55 @@ export default function ContentBox() {
       transform: scale(1.05);
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     }
+  `;
+  const Slideimage = styled.div`
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img {
+      width: 70%;
+      height: 70%;
+      border-radius: 8px; /* Add this line to apply rounded corners */
+    }
+  `;
+  const Slideinfo = styled.div`
+    width: 50%;
+    height: 100%;
+  `;
+  const Sliderow = styled.div`
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 80%;
+  `;
+  const Slidewrapper = styled.div`
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+  `;
+  const Sliderinfoheader = styled.div`
+    width: 100%;
+    height: 50%;
+    font-weight: 600;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `;
+
+  const Sliderinfocontent = styled.div`
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    color: #5b5f66;
+    font-size: 13px;
   `;
   const handleSlideClick = (lion) => {
     navigate(`/App/${lion.name}`, { state: lion }); // Pass the lion data as state
@@ -80,7 +131,10 @@ export default function ContentBox() {
           <Content_Top>
             <Content_Top_Map>{/* <Location></Location> */}</Content_Top_Map>
             <Content_Top_Scrap>
-              <Content_Top_Scrap_Header>스크랩</Content_Top_Scrap_Header>
+              <Content_Top_Scrap_Header>
+                <BsBookmark />
+                스크랩
+              </Content_Top_Scrap_Header>
               <Content_Top_Scrap_Body></Content_Top_Scrap_Body>
             </Content_Top_Scrap>
           </Content_Top>
@@ -103,14 +157,33 @@ export default function ContentBox() {
                 >
                   {text.map((lion, idx) => (
                     <SwiperSlide key={idx}>
-                      <button>스크랩</button>
-                      <Slide key={idx} onClick={() => handleSlideClick(lion)}>
-                        {/* <img
-                          src={`http://127.0.0.1:8000${lion.images[0].image}`}
-                          width={"100%"}
-                          height={"100%"}
-                        /> */}
-                        {lion.name}
+                      <Slide>
+                        <Slidewrapper
+                          key={idx}
+                          onClick={() => handleSlideClick(lion)}
+                        >
+                          <Slideimage>
+                            <img
+                              src={`http://127.0.0.1:8000${lion.images[0].image}`}
+                              alt={lion.name} // Don't forget to add alt attribute for accessibility
+                            />
+                          </Slideimage>
+                          <Slideinfo>
+                            <Sliderinfoheader>{lion.name}</Sliderinfoheader>
+                            <Sliderinfocontent>
+                              {lion.road_address}
+                              <br />
+                              {lion.operation_time}
+                              <br />
+                              평점: {lion.ratings}/5
+                            </Sliderinfocontent>
+                          </Slideinfo>
+                        </Slidewrapper>
+                        <Sliderow>
+                          <button onClick={() => navigate("/App/LookforPage")}>
+                            a
+                          </button>
+                        </Sliderow>
                       </Slide>
                     </SwiperSlide>
                   ))}
