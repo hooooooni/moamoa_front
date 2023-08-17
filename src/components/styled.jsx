@@ -207,3 +207,8 @@ export const Content_Slider = styled.div`
   font-size: 20px;
   color: #273345;
 `;
+
+export const NoScrapMessage = styled.div`
+    font-size: 12px;
+    text-align: center;
+`;

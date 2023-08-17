@@ -1,4 +1,3 @@
-// ReviewBox.js (또는 해당 파일 이름)
 import React, { useState, useEffect } from 'react';
 import * as S from './styled';
 import axios from 'axios';
@@ -8,11 +7,9 @@ export default function ReviewBox() {
 
     const fetchReviews = async () => {
         try {
-            const response = await axios.get("http://127.0.0.1:8000/api/user/my_reviews", // 요청 URL 변경
-                {
-                    withCredentials: true, // withCredentials 옵션 설정
-                }
-            );
+            const response = await axios.get("http://127.0.0.1:8000/api/user/my_reviews", {
+                withCredentials: true,
+            });
             setReviews(response.data);
         } catch (error) {
             console.log("Error fetching reviews:", error);
@@ -25,13 +22,11 @@ export default function ReviewBox() {
                 withCredentials: true,
             });
 
-            // 삭제 후, 리뷰 목록을 업데이트하여 삭제된 리뷰를 제거합니다.
             setReviews(reviews.filter(review => review.review_id !== reviewId));
         } catch (error) {
             console.log("Error deleting review:", error);
         }
     }
-
 
     useEffect(() => {
         fetchReviews();
@@ -47,17 +42,14 @@ export default function ReviewBox() {
                             <S.ReviewRating>
                                 평점 {review.rating}
                             </S.ReviewRating>
-                            {review.images.length > 0 ? (
+                            {review.images.length > 0 && (
                                 <img
                                     src={`http://127.0.0.1:8000${review.images[0].image}`}
                                     width={"100px"}
                                     height={"100px"}
                                     alt={`Review Image`}
                                 />
-                            ) : (
-                                <p>No image available</p>
                             )}
-
 
                             <S.ReviewTitle>
                                 <b>제목</b> {review.title}
