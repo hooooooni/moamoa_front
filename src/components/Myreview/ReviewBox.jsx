@@ -54,7 +54,7 @@ export default function ReviewBox() {
                   alt={`Review Image`}
                 />
               ) : (
-                <p>No image available</p>
+                <p> </p>
               )}
 
               <S.ReviewTitle>

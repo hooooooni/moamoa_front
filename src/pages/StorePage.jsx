@@ -123,6 +123,16 @@ function StorePage() {
     font-size: 10px;
   `;
 
+  const Div1 = styled.div`
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  align-items: center;
+  gap: 40px;
+  text-align: right;
+`;
+
+
   const SmallSliderview = styled.button`
     width: 90%;
     height: 120px;
@@ -132,6 +142,8 @@ function StorePage() {
     align-items: center;
     justify-content: center;
     background-color: #fcfaf7;
+    border: 1px solid transparent;
+    box-shadow: 4px 4px rgba(0,0,0,0.1);
   `;
   const SmallSliderviewheader = styled.button`
     width: 100%;
@@ -161,6 +173,9 @@ function StorePage() {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    border: 1px solid transparent;
+    border: 1px solid black;
+    border-radius: 15px;
   `;
   return (
     <>
@@ -253,9 +268,10 @@ function StorePage() {
                   <Storeinfo3rightheader>메뉴정보</Storeinfo3rightheader>
                   <Storeinfo3rightcontent>
                     {lionData.menus.map((menu, index) => (
-                      <div key={index}>
-                        {menu.name}: {menu.price}
-                      </div>
+                      <Div1 key={index}>
+                        <div><b>{menu.name}</b></div>
+                        <div>{menu.price}</div>
+                      </Div1>
                     ))}
                   </Storeinfo3rightcontent>
                 </Storeinfo3rightwrapper>

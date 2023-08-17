@@ -80,6 +80,7 @@ export default function ContentBox() {
     width: 100%;
     height: 200px;
     display: flex;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
     justify-content: center;
     flex-direction: row;
     align-items: center;

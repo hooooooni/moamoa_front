@@ -227,6 +227,7 @@ export const Storeinfobox5leftpicbox = styled.div`
   align-items: center;
   flex-direction: row;
   gap: 5px;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
 `;
 export const Storeinfobox5picleft = styled.div`
   width: 50%;
