@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+import StarModal from "../Modals/StarModal/StarModal";
 import { Content, ContentOuter } from "../components/Styled";
 import {
   StoreBmakrwrapper,
@@ -76,6 +77,18 @@ import "swiper/css/scrollbar";
 function StorePage() {
   const location = useLocation();
   const lionData = location.state;
+
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
+
+
 
   const Box = styled.div`
     width: 100%;
@@ -205,7 +218,7 @@ function StorePage() {
                   <Storeinfo3leftheader>
                     {/* {JSON.stringify(text,null,2)} */}
                     {lionData.name}
-                    <Valuebutton>
+                    <Valuebutton onClick={handleOpenModal}>
                       <BsPencil />
                       평가하기
                     </Valuebutton>
@@ -354,6 +367,8 @@ function StorePage() {
           </StorePageBox>
         </Content>
       </ContentOuter>
+      {isModalOpen && <StarModal onClose={handleCloseModal} storeId={lionData.store_id} />}
+
     </>
   );
 }
