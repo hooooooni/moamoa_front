@@ -182,7 +182,6 @@ export const Storeinfo4slide = styled.div`
 export const Storeinfobox5 = styled.div`
   width: 100%;
   height: 23%;
-
   border-radius: 8px;
   display: flex;
   justify-content: center;
@@ -191,7 +190,6 @@ export const Storeinfobox5 = styled.div`
 export const Storeinfobox5wrapper = styled.div`
   width: 100%;
   height: 100%;
-
   border-radius: 8px;
   display: flex;
   flex-direction: row;
@@ -203,7 +201,6 @@ export const Storeinfobox5wrapper = styled.div`
 export const Storeinfobox5left = styled.div`
   width: 50%;
   height: 98%;
-
   border-radius: 8px;
   display: flex;
   justify-content: center;
@@ -224,7 +221,6 @@ export const Storeinfobox5leftheader = styled.div`
 export const Storeinfobox5leftpicbox = styled.div`
   width: 100%;
   height: 75%;
-
   border-radius: 8px;
   display: flex;
   justify-content: center;
@@ -245,7 +241,6 @@ export const Storeinfobox5picleft = styled.div`
 export const Storeinfobox5picright = styled.div`
   width: 50%;
   height: 100%;
-
   border-radius: 8px;
   display: flex;
   justify-content: center;
@@ -254,7 +249,6 @@ export const Storeinfobox5picright = styled.div`
 export const Storeinfobox5right = styled.div`
   width: 50%;
   height: 98%;
-
   border-radius: 8px;
   display: flex;
   justify-content: center;
@@ -265,7 +259,6 @@ export const Storeinfobox5right = styled.div`
 export const Storeinfobox5rightheader = styled.div`
   width: 100%;
   height: 20%;
-
   border-radius: 8px;
   display: flex;
   flex-direction: row;
@@ -286,7 +279,6 @@ export const Storeinfobox5rightprofile = styled.div`
 export const Storeinfobox5rightprofileiconbox = styled.div`
   width: 20px;
   height: 20px;
-
   border-radius: 80%;
 `;
 export const Storeinfobox5rightvalue = styled.div`

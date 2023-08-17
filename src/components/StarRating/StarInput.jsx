@@ -39,11 +39,27 @@ const Label = styled.label`
 const StarInput = ({ onClickRating, value, isHalf }) => {
   const handleClickRatingInput = (value) => {
     onClickRating(value);
+
+    // 평가 값을 백엔드로 전송 (추가)
+    axios
+      .post("http://127.0.0.1:8000/api/rate", { rating: value })
+      .then((response) => {
+        console.log("Rating submitted successfully:", response.data);
+      })
+      .catch((error) => {
+        console.error("Error submitting rating:", error);
+      });
   };
 
   return (
     <>
-      <Input type="radio" name="rating" id={`star${value}`} value={value} />
+      <Input
+        type="radio"
+        name="rating"
+        id={`star${value}`}
+        value={value}
+        onChange={handleClickRatingInput}
+      />
       <Label
         onClick={handleClickRatingInput}
         isHalf={isHalf}

@@ -150,6 +150,7 @@ export const Content_Top = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+<<<<<<< HEAD
   align-items: center;
   gap: 40px;
 `;
@@ -159,6 +160,14 @@ export const Content_Top_Map = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+=======
+  gap: 40px;
+`;
+export const Content_Top_Map = styled.div`
+  width: 60%;
+  border: 1px solid black;
+  height: 100%;
+>>>>>>> 604006f443a6261f8666de33b67882c5967498f9
   border-radius: 10px;
 `;
 export const Content_Top_Scrap = styled.div`
@@ -210,3 +219,11 @@ export const Content_Slider = styled.div`
   font-size: 20px;
   color: #273345;
 `;
+<<<<<<< HEAD
+=======
+
+export const NoScrapMessage = styled.div`
+    font-size: 12px;
+    text-align: center;
+`;
+>>>>>>> 604006f443a6261f8666de33b67882c5967498f9
