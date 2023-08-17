@@ -27,9 +27,9 @@ export default function StarModal({ setStarmodalOpen, onClose, storeId }) {
         setSubmitting(true);
 
         const reviewData = {
-            rating: starRating,
             content: reviewContent,
-            images: [imgFile, imgFile2],
+            // rating: starRating,
+            // images: [imgFile, imgFile2],
             title: reviewTitle,
         };
 
