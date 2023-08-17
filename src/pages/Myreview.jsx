@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Content, ContentOuter } from "../components/styled";
 import styled from "styled-components";
-import StarModal from "../Modals/StarModal/StarModal";
 import ReviewBox from "../components/Myreview/ReviewBox";
 
-function Myreview() {
+function MyReview() {
   // const [notifimodalOpen, setNotifimodalOpen] = useState(false);
   const [starmodalOpen, setStarmodalOpen] = useState(false);
 
@@ -41,4 +40,4 @@ function Myreview() {
   );
 }
 
-export default Myreview;
+export default MyReview;

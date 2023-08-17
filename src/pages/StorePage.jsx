@@ -34,7 +34,7 @@ import {
   Storeinfobox5rightprofile,
   Storeinfobox5rightvalue,
   Storeinfobox5wrapper,
-} from "./Pagesstyled";
+} from "./StoreStyled";
 import styled from "styled-components";
 
 import { HiOutlineSpeakerphone } from "react-icons/hi";
