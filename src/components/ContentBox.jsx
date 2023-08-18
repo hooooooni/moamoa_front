@@ -45,6 +45,11 @@ export default function ContentBox() {
       );
       setText(response.data);
       console.log(response.data);
+      const initialScrapStates = {};
+      response.data.forEach((lion) => {
+        initialScrapStates[lion.store_id] = lion.scrap_status;
+      });
+      setScrapStates(initialScrapStates);
     } catch (error) {
       console.log("err");
     }
