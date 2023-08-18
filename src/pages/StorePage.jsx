@@ -361,9 +361,7 @@ function StorePage() {
                                   "등록된 사진이 없습니다"
                                 )}
                               </Storeinfobox5picleft>
-                              <Storeinfobox5picright>
-                                등록된 사진이 없습니다
-                              </Storeinfobox5picright>
+                              <Storeinfobox5picright></Storeinfobox5picright>
                             </Storeinfobox5leftpicbox>
                           </Storeinfobox5left>
                           <Storeinfobox5right>
