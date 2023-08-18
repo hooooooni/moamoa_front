@@ -45,7 +45,6 @@ export default function ReviewBox() {
           <S.Review_Item key={index}>
             <S.Review>
               <S.ReviewStoreName>{review.storename}</S.ReviewStoreName>
-              <S.ReviewRating>평점 {review.rating}</S.ReviewRating>
               {review.images.length > 0 ? (
                 <img
                   src={`${review.images[0].image}`}
