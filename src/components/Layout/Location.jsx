@@ -6,9 +6,8 @@ const Location = () => {
   useEffect(() => {
     const loadKakaoMapScript = async () => {
       const script = document.createElement("script");
-      script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${
-        import.meta.env.VITE_APP_KAKAO_MAP
-      }&libraries=services&autoload=false`;
+      script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${import.meta.env.VITE_APP_KAKAO_MAP
+        }&libraries=services&autoload=false`;
       script.async = true;
 
       script.onload = () => {
@@ -41,8 +40,8 @@ const Location = () => {
 
           const options = {
             center: new window.kakao.maps.LatLng(
-              37.365264512305174,
-              127.10676860117488
+              37.4688345,
+              127.0412415
             ),
             level: 3,
           };
