@@ -11,7 +11,7 @@ function SignUp() {
   const url = "http://127.0.0.1:8000/api/kakao/login";
 
   const goToApp = () => {
-    navigate("http://127.0.0.1:8000/api/kakao/login");
+    navigate("http://13.209.111.199/api/kakao/login");
   };
 
   const gotoMainPage = () => {
